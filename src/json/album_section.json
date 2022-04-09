@@ -1,0 +1,78 @@
+[
+   {
+   "title": "Popular Books",
+   "horizontal": true,
+   "sstar":"https://github.com/pinyi0911/BookApp/blob/master/img/Star%201-1.png?raw=true",
+   "data": [
+      {
+         "star":  null,
+         "light_star":"https://github.com/pinyi0911/BookApp/blob/master/img/Star%201-1.png?raw=true",
+         "dark_star": "https://github.com/pinyi0911/BookApp/blob/master/img/Star%201.png?raw=true",
+         "title": "Fashionopolis",
+         "artist": "Dana Thomas",
+         "url": "https://www.amazon.com/Taylor-Swift/dp/B0014I4KH6",
+         "image": "https://github.com/pinyi0911/BookApp/blob/master/img/img_book_fashinopolis.png?raw=true",     
+         "descriptions": "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+      },
+      {
+         "star":  null,
+         "light_star":"https://github.com/pinyi0911/BookApp/blob/master/img/Star%201-1.png?raw=true",
+         "dark_star": "https://github.com/pinyi0911/BookApp/blob/master/img/Star%201.png?raw=true",
+         "title": "Chanel",
+         "artist": "Patrick Mauriès",
+         "url": "https://www.amazon.com/Fearless-Enhanced-Taylor-Swift/dp/B001EYGOEM",
+         "image": "https://github.com/pinyi0911/BookApp/blob/master/img/img_book_chanel.png?raw=true",
+         "descriptions": "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+      },
+      {
+         "star": null,
+         "light_star":"https://github.com/pinyi0911/BookApp/blob/master/img/Star%201-1.png?raw=true",
+         "dark_star": "https://github.com/pinyi0911/BookApp/blob/master/img/Star%201.png?raw=true",
+         "title": "Calligraphy",
+         "artist": "June & Lucy",
+         "url": "https://www.amazon.com/Speak-Now-Taylor-Swift/dp/B003WTE886",
+         "image": "https://github.com/pinyi0911/BookApp/blob/master/img/img_book_calligraphy.png?raw=true",
+         "descriptions": "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+      }
+   ]},
+   {
+      "title": "Newest",
+      "horizontal": true,
+      "sstar":"https://github.com/pinyi0911/BookApp/blob/master/img/Star%201-1.png?raw=true",
+      "data": [
+         {
+         "star": 4,
+         "light_star":"https://github.com/pinyi0911/BookApp/blob/master/img/Star%201-1.png?raw=true",
+         "dark_star": "https://github.com/pinyi0911/BookApp/blob/master/img/Star%201.png?raw=true",
+         "title": "Yves Saint Laurent",
+         "artist": "Suzy Menkes",
+         "url": "https://www.amazon.com/Taylor-Swift/dp/B0014I4KH6",
+         "image": "https://github.com/pinyi0911/BookApp/blob/master/img/img_book_ysl.png?raw=true",
+         "descriptions": "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+         },
+         {
+            "star": 3,
+            "light_star":"https://github.com/pinyi0911/BookApp/blob/master/img/Star%201-1.png?raw=true",
+            "dark_star": "https://github.com/pinyi0911/BookApp/blob/master/img/Star%201.png?raw=true",
+            "title": "The Book of Signs",
+            "artist": "Rudolf Koch",
+            "url": "https://www.amazon.com/Taylor-Swift/dp/B0014I4KH6",
+            "image": "https://github.com/pinyi0911/BookApp/blob/master/img/img_book_tbos.png?raw=true",
+            "descriptions": "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+            },
+         {
+            "star": 3,
+            "light_star":"https://github.com/pinyi0911/BookApp/blob/master/img/Star%201-1.png?raw=true",
+            "dark_star": "https://github.com/pinyi0911/BookApp/blob/master/img/Star%201.png?raw=true",
+            "title": "Stitched Up",
+            "artist": "Tansy E. Hoskins",
+            "url": "https://www.amazon.com/Fearless-Enhanced-Taylor-Swift/dp/B001EYGOEM",
+            "image": "https://github.com/pinyi0911/BookApp/blob/master/img/img_book_stitchedup.png?raw=true",
+            "descriptions": "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+         }
+   ]}
+   
+     
+    
+  
+]
