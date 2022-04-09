@@ -9,8 +9,7 @@ const App = () => {
     <SafeAreaProvider>
         
         <NativeBaseProvider >
-          <Navigation />
-          
+          <Navigation />  
         </NativeBaseProvider>
 
     </SafeAreaProvider>

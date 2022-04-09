@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image,Pressable} from "react-native";
-import StarMaker from "./StarMaker";
+
 const HotAlbumDetail = props => {
    let { album,navigation } = props;
    return (
@@ -16,11 +16,7 @@ const HotAlbumDetail = props => {
             source={{uri: album.image}}
           />
           </Pressable>
-           <StarMaker 
-           star={album.star} 
-           light_star={album.light_star}
-           dark_star={album.dark_star}  
-           />
+
         </View>
       </View> 
  

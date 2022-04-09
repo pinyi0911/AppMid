@@ -11,7 +11,7 @@ import { Divider,  Input, HStack, Text } from 'native-base';
 import AlbumScreen from '../screens/AlbumScreen';
 import DetailScreen from '../screens/DetailScreen';
 import WishlistScreen from '../screens/WishlistScreen';
-import MybookScreen from '../screens/MybookScreen';
+
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
@@ -39,8 +39,8 @@ const CustomDrawerContent = (props) => {
       contentContainerStyle={{ paddingTop: 0 }}
     >
       <Image
-        h={250}
-        source={require("../img/drawerTile.png")}
+        style={{height:230,}}
+        source= {{uri:"https://github.com/pinyi0911/AppMid/blob/master/img/drawerTile.png?raw=true"}}
         alt='albumImage'
       />
       <DrawerItemList {...props} />
@@ -50,16 +50,13 @@ const CustomDrawerContent = (props) => {
         activeBackgroundColor={"#000"}
         activeTintColor={"#000"}
         inactiveTintColor={"#000"}
-        labelStyle={ {fontSize: 18, fontWeight: '400'} }
+        labelStyle={ {fontSize: 15, fontWeight: '400'} }
         icon={({ color }) => (
           <MaterialCommunityIcons name="account-question" color="#000" size={26} />
         )}
         onPress={()=>alert('Need Help ...')}
       />
-      <HStack pl="4" alignItems="center">
-        <MaterialCommunityIcons name="magnify" color={"#000"} size={26} />
-        <Input mx="3" fontSize={18} placeholder="Input Search Text" flex={1} />
-      </HStack>
+ 
 
     </DrawerContentScrollView>
   );
@@ -75,8 +72,9 @@ const MyDrawer = () => {
         // drawerActiveBackgroundColor: colors.primary100,
         // drawerActiveTintColor: colors.primary700,
         // drawerInactiveTintColor: colors.light500,
-        drawerStyle: { width: 300 },
-        drawerLabelStyle: { fontSize: 18, fontWeight: '400' },
+        drawerStyle: { width: 340 ,backgroundColor:"#F8F8F8",},
+        drawerLabelStyle: { fontSize: 15, fontWeight: '700',marginLeft:20,color:"#2E2015", },
+        tapToClose: true,
       }}
       drawerContent={props => <CustomDrawerContent {...props} />}
     >
@@ -84,11 +82,10 @@ const MyDrawer = () => {
         name="HomeStack"
         component={HomeStack}
         options={{
+          tapToClose: true,
           headerShown: false,
-          drawerLabel: "Home",
-          drawerIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={color} size={26} />
-          ),
+          drawerLabel: "首頁",
+
         }}
       />
 
@@ -96,14 +93,24 @@ const MyDrawer = () => {
         name="Wishlist" 
         component={WishlistScreen} 
         options={{
+          title: "序號兌換",
+          headerTitleStyle: {
+            fontWeight: '400',
+            fontSize: 20
+          },
+          
+        }}
+      />
+           <Drawer.Screen 
+        name="Wish" 
+        component={WishlistScreen} 
+        options={{
           title: "Wishlist",
           headerTitleStyle: {
             fontWeight: '400',
             fontSize: 20
           },
-          drawerIcon: ({ color }) => (
-            <MaterialCommunityIcons name="bookmark" color={color} size={24} />
-          ),
+          
         }}
       />
       
@@ -113,62 +120,7 @@ const MyDrawer = () => {
   );
 }
 
-const MyTabs = () => {
-  return (
-    <Tab.Navigator
-      initialRouteName="HomeStack"
-      screenOptions={{
-        tabBarActiveTintColor: '#6200EE',
-        // headerShown: false
-      }}
-      
-    >
-      <Tab.Screen 
-        name="HomeStack" 
-        component={HomeStack}
-        options={{
-          headerShown: false,
-          title: "Home",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={color} size={24} />
-          ),
-          
-        }}
-        
-      />
-      <Tab.Screen 
-        name="Wishlist" 
-        component={WishlistScreen} 
-        options={{
-          title: "Wishlist",
-          headerTitleStyle: {
-            fontWeight: '400',
-            fontSize: 20
-          },
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="bookmark" color={color} size={24} />
-          ),
-        }}
-      />
 
-        <Tab.Screen 
-          name="My books" 
-          component={MybookScreen} 
-          options={{
-            title: "My books",
-            headerTitleStyle: {
-              fontWeight: '400',
-              fontSize: 20
-            },
-            tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name="book-open" color={color} size={24} />
-            ),
-            
-          }}
-        />
-    </Tab.Navigator>
-  );
-}
 
 const HomeStack = ({navigation}) => {
 
@@ -190,39 +142,22 @@ const HomeStack = ({navigation}) => {
         options={{
           title: " ",
           headerStyle: {
-            backgroundColor: '#fff',
+            backgroundColor: '#f8f8f8',
           },
           headerTitleStyle: {
             fontWeight: '400',
             fontSize: 20
           },
-          headerShadowVisible: false,//去除陰影
-          headerRight: () => (
-            // <AntDesign name="SearchOutlined" color={color} size={24} />
-            <TouchableOpacity >
-            <Image source={{uri:'https://github.com/pinyi0911/BookApp/blob/master/img/icon.png?raw=true'}} 
-            style={{
-              marginTop:30,
-              marginBottom:19,
-              height:17.5,
-              width:17.5,
-          }}
-          
-            />
-            </TouchableOpacity>
-            
- 
-          ), // 右邊放入 icon
+          // headerShadowVisible: false,//去除陰影
 
           headerLeft: () => (
 
             <MaterialCommunityIcons 
-            name="book-open" color="#000" size={24} 
+            name="menu" color="#2E2015" size={24} 
             onPress={()=>navigation.openDrawer()}
             />
             
- 
-          ), // 右邊放入 icon
+          ), // 漢堡選單
         }}
       />
 

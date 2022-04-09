@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, ScrollView, Text, View, Image, Button, Linking,TouchableOpacity } from 'react-native';
-import StarMaker from "../components/StarMaker";
-import Score from "../components/Score";
+
 const DetailScreen = ({ route }) => {
   const { title, 
     artist,
@@ -25,16 +24,7 @@ const DetailScreen = ({ route }) => {
 
       <View style={styles.starContainerStyle}>
 
-        <StarMaker
-           star={star} 
-           light_star={light_star}
-           dark_star={dark_star}  
-        />
-          <Score
-           star={star} 
-           light_star={light_star}
-           dark_star={dark_star}  
-        />
+        
       </View>
 
       <Text 

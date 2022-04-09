@@ -42,10 +42,11 @@ const styles = StyleSheet.create({
   sectionHeader: {
     
     fontWeight: 'bold',
-    fontSize: 24,
-    paddingTop: 8,
+    fontSize: 17,
+    paddingTop: 45,
     paddingBottom: 5,
-    paddingLeft: 10,
+    paddingLeft: 25,
+    color:"#2E2015",
     
   },
 })
