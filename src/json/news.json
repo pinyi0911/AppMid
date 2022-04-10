@@ -1,0 +1,30 @@
+[
+   {
+   "title": "全新活動",
+   "horizontal": true,
+   
+   "data": [
+      {
+         
+         "title": "前進 ！深入黑可可王國",
+         "subtitle": "主線14章開啟",
+         "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Mask%20group.png?raw=true",     
+         "descriptions": "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+      },
+      {
+         
+         "title": "跟上 ！各位戰士們",
+         "subtitle": "一起守護餅國",
+         "image": "https://github.com/pinyi0911/AppMid/blob/master/img/pic-1.png?raw=true",
+         "descriptions": "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+      },
+      {
+         
+         "title": "冰霜女王餅乾的傳說",
+         "subtitle": "棉花餅乾的旅程將會如何",
+         "image": "https://github.com/pinyi0911/AppMid/blob/master/img/pic.png?raw=true",
+         "descriptions": "A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."
+      }
+   ]}
+
+]

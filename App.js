@@ -6,7 +6,7 @@ import Navigation from './src/navigation';
 
 const App = () => {
   return (
-    <SafeAreaProvider>
+    <SafeAreaProvider >
         
         <NativeBaseProvider >
           <Navigation />  

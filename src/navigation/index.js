@@ -6,11 +6,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { Divider,  Input, HStack, Text } from 'native-base';
+import { Divider,  Input, HStack,VStack, Text,Switch,useColorMode,Center } from 'native-base';
+import { StatusBar } from 'native-base';
 
-import AlbumScreen from '../screens/AlbumScreen';
+import MainScreen from '../screens/MainScreen';
 import DetailScreen from '../screens/DetailScreen';
-import WishlistScreen from '../screens/WishlistScreen';
+import SerialNumScreen from '../screens/SerialNumScreen';
+import MyBookScreen from '../screens/MybookScreen';
 
 import {
   createDrawerNavigator,
@@ -24,8 +26,17 @@ const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const Navigation = () => {
+const { colorMode } = useColorMode();
   return (
     <NavigationContainer>
+      <StatusBar
+        barStyle={
+          colorMode == "light" ? "dark-content" : "light-content"
+        }
+        backgroundColor={
+          colorMode == "light" ? "white" : "black"
+        }
+      />
       <MyDrawer />
     </NavigationContainer>
   );
@@ -33,7 +44,7 @@ const Navigation = () => {
 
 const CustomDrawerContent = (props) => {
   // const { colors } = useTheme();
-
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <DrawerContentScrollView {...props}
       contentContainerStyle={{ paddingTop: 0 }}
@@ -45,7 +56,7 @@ const CustomDrawerContent = (props) => {
       />
       <DrawerItemList {...props} />
       <Divider my="2"/>
-      <DrawerItem 
+      {/* <DrawerItem 
         label="Help"
         activeBackgroundColor={"#000"}
         activeTintColor={"#000"}
@@ -55,8 +66,31 @@ const CustomDrawerContent = (props) => {
           <MaterialCommunityIcons name="account-question" color="#000" size={26} />
         )}
         onPress={()=>alert('Need Help ...')}
-      />
- 
+        
+
+      /> */}
+      
+      
+      <HStack alignItems="center" ml="30" fontWeight="bold">
+      <Text 
+      bold fontSize="15" color={colorMode == "light" ? "#2E2015" : "#f8f8f8"}
+      >{colorMode == "light" ? "日間模式" : "夜間模式"}</Text>
+       <Switch
+                  // name="light Mode"
+                  isChecked={colorMode === "light"}
+                  onToggle={toggleColorMode}
+                  offTrackColor="#f8f8f8" 
+                  onTrackColor="#2E2015"
+                  offThumbColor="#FFC764" 
+                  onThumbColor="#FFC764"
+                  ml="3"
+  
+         />
+        <Center/>
+        </HStack> 
+        {/* light/dark模式按鈕 */}
+      
+          
 
     </DrawerContentScrollView>
   );
@@ -64,17 +98,17 @@ const CustomDrawerContent = (props) => {
 
 const MyDrawer = () => {
   // const { colors } = useTheme();
-
+  const { colorMode } = useColorMode();
   return (
     <Drawer.Navigator
       initialRouteName="HomeStack"
       screenOptions={{
-        // drawerActiveBackgroundColor: colors.primary100,
-        // drawerActiveTintColor: colors.primary700,
-        // drawerInactiveTintColor: colors.light500,
-        drawerStyle: { width: 340 ,backgroundColor:"#F8F8F8",},
-        drawerLabelStyle: { fontSize: 15, fontWeight: '700',marginLeft:20,color:"#2E2015", },
-        tapToClose: true,
+        drawerActiveBackgroundColor: colorMode=='light'?"#FFC764":"#C0A068",
+        drawerActiveTintColor: "#FFC764",
+        drawerInactiveTintColor: "#FFC764",
+        drawerStyle: { width: "85%" ,backgroundColor:colorMode=='light'?'#f8f8f8':"#2E2015",},
+        drawerLabelStyle: { fontSize: 15, fontWeight: '700',marginLeft:15,color:colorMode=='light'?"#2E2015":'#f8f8f8', },
+        
       }}
       drawerContent={props => <CustomDrawerContent {...props} />}
     >
@@ -90,29 +124,36 @@ const MyDrawer = () => {
       />
 
      <Drawer.Screen 
-        name="Wishlist" 
-        component={WishlistScreen} 
+        name="SerialNum" 
+        component={SerialNumScreen} 
         options={{
+          
           title: "序號兌換",
           headerTitleStyle: {
-            fontWeight: '400',
-            fontSize: 20
+            fontWeight: '700',
+            fontSize: 15,
+            marginRight:20
           },
-          
+          headerStyle: {
+            backgroundColor: "#2E2015",
+          },
+
         }}
       />
-           <Drawer.Screen 
-        name="Wish" 
-        component={WishlistScreen} 
+
+        {/* <Drawer.Screen 
+        name="test" 
+        component={MyBookScreen} 
         options={{
-          title: "Wishlist",
+          title: "test",
           headerTitleStyle: {
-            fontWeight: '400',
-            fontSize: 20
+            fontWeight: '700',
+            fontSize: 15
           },
           
         }}
-      />
+      /> */}
+    
       
       
     </Drawer.Navigator>
@@ -124,7 +165,7 @@ const MyDrawer = () => {
 
 const HomeStack = ({navigation}) => {
 
-
+  const { colorMode } = useColorMode();
   const [change, setChange] = useState(true);
     const changeIcon = () => {
         setChange(!change);
@@ -138,11 +179,11 @@ const HomeStack = ({navigation}) => {
     >
       <Stack.Screen
         name="Home"
-        component={AlbumScreen}
+        component={MainScreen}
         options={{
           title: " ",
           headerStyle: {
-            backgroundColor: '#f8f8f8',
+            backgroundColor: colorMode=='light'?"#f8f8f8":"#2E2015",
           },
           headerTitleStyle: {
             fontWeight: '400',
@@ -153,13 +194,14 @@ const HomeStack = ({navigation}) => {
           headerLeft: () => (
 
             <MaterialCommunityIcons 
-            name="menu" color="#2E2015" size={24} 
+            name="menu" color={colorMode=='light'?"#2E2015":"#FFC764"} size={24} marginLeft="20" 
             onPress={()=>navigation.openDrawer()}
             />
             
           ), // 漢堡選單
         }}
       />
+      
 
 
       

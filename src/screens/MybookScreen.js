@@ -5,7 +5,7 @@ const MybookScreen = () => {
     return (
     <Center bg="#666666" flex={1}>
         <Text color="#fff" fontSize={30}>
-            This is a My Books Page
+            還沒改這邊
         </Text>              
     </Center>
     );

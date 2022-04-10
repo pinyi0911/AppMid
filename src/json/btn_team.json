@@ -1,0 +1,22 @@
+[
+{
+   "title": "隊伍推薦",
+   "horizontal": true,
+   
+   "data": [
+      {     
+      "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Component%2011.png?raw=true"
+      
+      },
+      {           
+      "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Component%209.png?raw=true"
+       
+         },
+      {          
+      "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Component%208.png?raw=true"
+      },
+      {          
+      "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Component%2010.png?raw=true"
+      }
+]}
+]
