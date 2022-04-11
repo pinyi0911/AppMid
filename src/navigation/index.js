@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { Divider,  Input, HStack,VStack, Text,Switch,useColorMode,Center } from 'native-base';
+import { Divider,  Input, HStack,VStack, Text,Switch,useColorMode,Center,Box } from 'native-base';
 import { StatusBar } from 'native-base';
 
 import MainScreen from '../screens/MainScreen';
@@ -125,34 +125,15 @@ const MyDrawer = () => {
 
      <Drawer.Screen 
         name="SerialNum" 
-        component={SerialNumScreen} 
+        component={SerialStack} 
         options={{
           
-          title: "序號兌換",
-          headerTitleStyle: {
-            fontWeight: '700',
-            fontSize: 15,
-            marginRight:20
-          },
-          headerStyle: {
-            backgroundColor: "#2E2015",
-          },
+          headerShown: false,
+          drawerLabel: "序號兌換",
 
         }}
       />
 
-        {/* <Drawer.Screen 
-        name="test" 
-        component={MyBookScreen} 
-        options={{
-          title: "test",
-          headerTitleStyle: {
-            fontWeight: '700',
-            fontSize: 15
-          },
-          
-        }}
-      /> */}
     
       
       
@@ -161,7 +142,54 @@ const MyDrawer = () => {
   );
 }
 
+const SerialStack = ({navigation}) => {
 
+  const { colorMode } = useColorMode();
+
+
+  return (
+    <Stack.Navigator
+      // screenOptions={{
+      //   headerShown: false
+      // }}
+    >
+      
+    
+<Stack.Screen
+        name="SerialNum"
+        component={SerialNumScreen}
+        options={{
+          title: "序號兌換",
+          headerStyle: {
+            backgroundColor: colorMode=='light'?"#f8f8f8":"#2E2015",
+          },
+          headerTitleStyle: {
+            fontWeight: '700',
+            fontSize: 15,
+            // marginLeft:20,
+            color:colorMode=='light'?"#2E2015":"#f8f8f8"
+          },
+          // headerShadowVisible: false,//去除陰影
+
+          headerLeft: () => (
+            <Box mr="3" >
+            <MaterialCommunityIcons 
+            name="menu" color={colorMode=='light'?"#2E2015":"#FFC764"} size={24} 
+            onPress={()=>navigation.openDrawer()}
+            />
+            </Box>
+          ), // 漢堡選單
+        }}
+      />
+      
+
+
+      
+      
+
+    </Stack.Navigator>
+  );
+}
 
 const HomeStack = ({navigation}) => {
 
@@ -177,6 +205,7 @@ const HomeStack = ({navigation}) => {
       //   headerShown: false
       // }}
     >
+      
       <Stack.Screen
         name="Home"
         component={MainScreen}
@@ -201,6 +230,31 @@ const HomeStack = ({navigation}) => {
           ), // 漢堡選單
         }}
       />
+
+{/* <Stack.Screen
+        name="SerialNum"
+        component={SerialNumScreen}
+        options={{
+          title: "序號兌換",
+          headerStyle: {
+            backgroundColor: colorMode=='light'?"#f8f8f8":"#2E2015",
+          },
+          headerTitleStyle: {
+            fontWeight: '400',
+            fontSize: 20
+          },
+          // headerShadowVisible: false,//去除陰影
+
+          headerLeft: () => (
+
+            <MaterialCommunityIcons 
+            name="menu" color={colorMode=='light'?"#2E2015":"#FFC764"} size={24} marginLeft="20" 
+            onPress={()=>navigation.openDrawer()}
+            />
+            
+          ), // 漢堡選單
+        }}
+      /> */}
       
 
 
