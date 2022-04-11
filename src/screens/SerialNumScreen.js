@@ -1,15 +1,24 @@
 import React from 'react';
-import { Center, Text,useColorMode } from "native-base";
+import { Center, Text,useColorMode,Box } from "native-base";
+import serialData from "../json/serialnum.json";
+import SerialList from "../components/SerialList";
 
-const SerialNumScreen = () => {
+const SerialNumScreen = ({ navigation }) => {
 const { colorMode } = useColorMode();
  
     return (
-    <Center bg={colorMode == "light" ? "#f8f8f8" : "#2E2015"} flex={1}>
-        <Text color="#fff" fontSize={30}>
-            序號兌換
-        </Text>              
-    </Center>
+    <Box 
+    bg={colorMode == "light" ? "#f8f8f8" : "#2E2015"} 
+    flex={1}
+    >
+
+   
+            <SerialList
+                    list={serialData.data}
+                    navigation={navigation}
+            />
+            
+    </Box>
     );
 }
 
