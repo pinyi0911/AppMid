@@ -34,7 +34,7 @@ const { colorMode } = useColorMode();
           colorMode == "light" ? "dark-content" : "light-content"
         }
         backgroundColor={
-          colorMode == "light" ? "white" : "black"
+          colorMode == "light" ? "white" : "#3F2B1C"
         }
       />
       <MyDrawer />
@@ -156,7 +156,7 @@ const SerialStack = ({navigation}) => {
       
     
 <Stack.Screen
-        name="SerialNum"
+        name="SerialPage"
         component={SerialNumScreen}
         options={{
           title: "序號兌換",

@@ -1,6 +1,5 @@
 import React,{useState} from "react";
-import { Box, HStack, VStack, AspectRatio, Text, Image, Pressable,useColorMode} from "native-base"
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Box, HStack, VStack, AspectRatio, Text, Image, Pressable,useColorMode,Center} from "native-base"
 
 const SerialDetail = ({ serial, navigation }) => {
 const { colorMode } = useColorMode();
@@ -9,16 +8,21 @@ const [change, setChange] = useState(true);
       setChange(!change);
   };
   return (
+    <Center>
     <Box>
+        <HStack
+        alignItems="center"
+        >
         <VStack 
         borderLeftWidth= "7"
         mt="5"
-        ml="5"
+        ml="1"
         borderLeftColor="#FFC764"
+        
         >
           <Text
           color={colorMode == "light" ? "#2E2015" : "#f8f8f8"} 
-          ml="3" fontWeight="700">{serial.name}</Text>
+          ml="3" fontWeight="700" w="203">{serial.name}</Text>
           <Text
           color={colorMode == "light" ? "#2E2015" : "#f8f8f8"}
           ml="3">{serial.gift}</Text>
@@ -27,19 +31,30 @@ const [change, setChange] = useState(true);
           ml="3">{serial.time}</Text>
         </VStack>
 
-         <Pressable onPress={() => changeIcon()}>
+         <Pressable
+
+          onPress={() => changeIcon()}>
               
               {change ? 
-              <Text width="50"height="30" 
-              bg="#000"
-              color="#FFC764"
-              >
-              ttt</Text>
-                       :<MaterialCommunityIcons name={'bookmark'} color={'#6200EE'} size={24} />
+            <Image height="50" width="92"
+            source={{uri:"https://github.com/pinyi0911/AppMid/blob/master/img/Property%201=Variant2.png?raw=true"}}
+            alt="未兌換"
+            h="50"
+            w="92"
+            />
+              :<Image height="50" width="92"
+              source={{uri:"https://github.com/pinyi0911/AppMid/blob/master/img/Property%201=Default.jpg?raw=true"}}
+              alt="已兌換"
+              h="50"
+              w="92"
+              />
               }
-              </Pressable>
+         </Pressable>
+        </HStack>
+        
       
     </Box>
+    </Center>
   )};
 
 export default SerialDetail;
