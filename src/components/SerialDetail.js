@@ -43,7 +43,7 @@ const [change, setChange] = useState(true);
             w="92"
             />
               :<Image height="50" width="92"
-              source={{uri:"https://github.com/pinyi0911/AppMid/blob/master/img/Property%201=Default.png?raw=true"}}
+              source={{uri:"https://github.com/pinyi0911/AppMid/blob/master/img/Property%201=Default%20(1).png?raw=true"}}
               alt="已兌換"
               h="50"
               w="92"
