@@ -15,27 +15,27 @@ const Team = ({navigation}) => {
     <ScrollView horizontal={true}>
 
     <Pressable
-    onPress={() => {navigation.navigate('SerialNum')} }
+    onPress={()=>alert('還未開放喔')}
     >
     <Image
     source={{uri:"https://github.com/pinyi0911/AppMid/blob/master/img/Component%2011.png?raw=true"}}
     alt="最新餅乾"
     height="184"
     width= "120"
-    marginBottom="40"
+    
     
     ml="5"
     />
     </Pressable>
     <Pressable
-    onPress={() => {navigation.navigate('SerialNum')} }
+    onPress={()=>alert('還未開放喔') }
     >
     <Image
     source={{uri:"https://github.com/pinyi0911/AppMid/blob/master/img/Component%209.png?raw=true"}}
     alt="王國競技場"
     height="184"
     width= "120"
-    marginBottom="40"
+    
     
     ml="5"
     />
@@ -48,20 +48,20 @@ const Team = ({navigation}) => {
     alt="公會"
     height="184"
     width= "120"
-    marginBottom="40"
+    
     
     ml="5"
     />
     </Pressable>
     <Pressable
-    onPress={() => {navigation.navigate('SerialNum')} }
+    onPress={()=>alert('還未開放喔') }
     >
     <Image
     source={{uri:"https://github.com/pinyi0911/AppMid/blob/master/img/Component%2010.png?raw=true"}}
-    alt="守護"
+    alt="守護之戰"
     height="184"
     width= "120"
-    marginBottom="40"
+    marginBottom="20"
     mr="5"
     ml="5"
     />

@@ -57,7 +57,7 @@ const CustomDrawerContent = (props) => {
       />
       <DrawerItemList {...props} />
       <DrawerItem 
-        label="王國裝飾"
+        label="最新餅乾隊伍"
         activeBackgroundColor={"#000"}
         activeTintColor={"#fff"}
         inactiveTintColor={"#000"}
@@ -70,7 +70,8 @@ const CustomDrawerContent = (props) => {
         onPress={()=>alert('還未開放喔')}
       />
         <DrawerItem 
-        label="生產設施 & 商品"
+        
+        label="王國競技場隊伍"
         activeBackgroundColor={"#000"}
         activeTintColor={"#fff"}
         inactiveTintColor={"#000"}
@@ -82,7 +83,27 @@ const CustomDrawerContent = (props) => {
       } }
         onPress={()=>alert('還未開放喔')}
       />
-      <Divider my="2"/>
+      <DrawerItem 
+        
+        label="守護之戰隊伍"
+        activeBackgroundColor={"#000"}
+        activeTintColor={"#fff"}
+        inactiveTintColor={"#000"}
+        labelStyle={ {
+        fontSize: 15, 
+        fontWeight: '700',
+        marginLeft:15,
+        color:colorMode=='light'?"#2E2015":'#f8f8f8',
+      } }
+        onPress={()=>alert('還未開放喔')}
+      />
+      {/* <Text
+      color={colorMode == "light" ? "#DADADA" : "#f8f8f8"} ml="5"
+      fontSize="12"
+      >設定</Text> */}
+      <Center>
+      <Divider my="2" w="300" />
+      </Center>
       
       
       
@@ -160,7 +181,6 @@ const MyDrawer = () => {
         }}
       />
 
-    
       
       
     </Drawer.Navigator>
