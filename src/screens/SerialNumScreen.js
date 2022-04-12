@@ -26,7 +26,7 @@ const { colorMode } = useColorMode();
               onPress={() => Linking.openURL('https://game.devplay.com/coupon/ck/zh-Hant')}
               >
               <Text 
-              bg="#FFC764"w="315"h="50"
+              bg="#FFC764"w="330"h="50"
               textAlign="center"
               pt="3.5"
               borderRadius="6"

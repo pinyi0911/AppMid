@@ -55,25 +55,39 @@ const CustomDrawerContent = (props) => {
         alt='albumImage'
       />
       <DrawerItemList {...props} />
-      <Divider my="2"/>
-      {/* <DrawerItem 
-        label="Help"
+      <DrawerItem 
+        label="王國裝飾"
         activeBackgroundColor={"#000"}
-        activeTintColor={"#000"}
+        activeTintColor={"#fff"}
         inactiveTintColor={"#000"}
-        labelStyle={ {fontSize: 15, fontWeight: '400'} }
-        icon={({ color }) => (
-          <MaterialCommunityIcons name="account-question" color="#000" size={26} />
-        )}
-        onPress={()=>alert('Need Help ...')}
-        
-
-      /> */}
+        labelStyle={ {
+        fontSize: 15, 
+        fontWeight: '700',
+        marginLeft:15,
+        color:colorMode=='light'?"#2E2015":'#f8f8f8',
+      } }
+        onPress={()=>alert('還未開放喔')}
+      />
+        <DrawerItem 
+        label="生產設施 & 商品"
+        activeBackgroundColor={"#000"}
+        activeTintColor={"#fff"}
+        inactiveTintColor={"#000"}
+        labelStyle={ {
+        fontSize: 15, 
+        fontWeight: '700',
+        marginLeft:15,
+        color:colorMode=='light'?"#2E2015":'#f8f8f8',
+      } }
+        onPress={()=>alert('還未開放喔')}
+      />
+      <Divider my="2"/>
       
       
-      <HStack alignItems="center" ml="30" fontWeight="bold">
+      
+      <HStack alignItems="center"  fontWeight="bold">
       <Text 
-      bold fontSize="15" color={colorMode == "light" ? "#2E2015" : "#f8f8f8"}
+      bold fontSize="15" color={colorMode == "light" ? "#2E2015" : "#f8f8f8"} ml="33"
       >{colorMode == "light" ? "日間模式" : "夜間模式"}</Text>
        <Switch
                   // name="light Mode"
@@ -230,33 +244,6 @@ const HomeStack = ({navigation}) => {
           ), // 漢堡選單
         }}
       />
-
-{/* <Stack.Screen
-        name="SerialNum"
-        component={SerialNumScreen}
-        options={{
-          title: "序號兌換",
-          headerStyle: {
-            backgroundColor: colorMode=='light'?"#f8f8f8":"#2E2015",
-          },
-          headerTitleStyle: {
-            fontWeight: '400',
-            fontSize: 20
-          },
-          // headerShadowVisible: false,//去除陰影
-
-          headerLeft: () => (
-
-            <MaterialCommunityIcons 
-            name="menu" color={colorMode=='light'?"#2E2015":"#FFC764"} size={24} marginLeft="20" 
-            onPress={()=>navigation.openDrawer()}
-            />
-            
-          ), // 漢堡選單
-        }}
-      /> */}
-      
-
 
       
       <Stack.Screen

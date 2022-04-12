@@ -3,39 +3,24 @@ import { Text, FlatList, SectionList, StyleSheet } from "react-native";
 import NewsDetail from "./NewsDetail";
 import news from "../json/news.json";
 
-const NewsList = ({ navigation }) => {
-  const renderSectionHeader = ({section}) => (
-    <>
-      <Text style={styles.sectionHeader}>{section.title}</Text>
-      {section.horizontal ? (
-        <FlatList 
-          horizontal={true}
-          data={section.data}
-          renderItem={({ item }) => <NewsDetail navigation={navigation} news={item} />}
-          showsHorizontalScrollIndicator={false}
-          keyExtractor={ item => item.title }
-        />
-      ) : null}
-    </>
-  );
-  const renderItem = ({ item, section}) => {
-    if (section.horizontal) {
-      return null;
-    }
-    
-  };
 
+const NewsList = ({ list,navigation }) => {
+
+  const renderItem = ({ item }) => <NewsDetail news={item} navigation={navigation} />;
   return (
-    <SectionList 
-      sections={news}
-      contentContainerStyle={{ paddingHorizontal: 10 }}
-      stickySectionHeadersEnabled={false}
-      showsHorizontalScrollIndicator={false}
-      renderSectionHeader={renderSectionHeader}
+
+    <FlatList
+    _dark={{ bg: "#2E2015" }}
+    _light={{ bg: "#f8f8f8" }}
+     horizontal={true}//其他地方需要水平排可以用
+      data={list}
       renderItem={renderItem}
-      keyExtractor={ item => item.title }
-    />
-  );
+      keyExtractor={item => item.title}
+      showsHorizontalScrollIndicator={false}
+      contentContainerStyle={{ paddingHorizontal: 10 }}
+    /> 
+       
+  );  
 };
 
 const styles = StyleSheet.create({

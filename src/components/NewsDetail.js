@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, Image,Pressable} from "react-native";
-
+import { Box, HStack, VStack, useColorMode,Center} from "native-base"
 const NewsDetail = props => {
-  
+  const { colorMode } = useColorMode();
    let { news } = props;
    return (
      <View style={{flexDirection: 'column'}}>
@@ -16,8 +16,25 @@ const NewsDetail = props => {
       </View> 
  
       <View style={styles.headerContainerStyle}>
-      <Text style={styles.headerTitleStyle}>{news.title}</Text>
-        <Text style={styles.headerContentStyle}>{news.subtitle}</Text>
+      <Text style={{
+
+      fontSize: 15,
+      fontWeight: 'bold',
+      marginHorizontal:5,
+      color: colorMode == "light" ? "#2E2015" : "#f8f8f8",
+
+      }}>{news.title}</Text>
+
+      <Text style={{
+
+      fontSize: 12,
+      fontWeight: '500',
+      color: colorMode == "light" ? "#2E2015" : "#FFC764",
+      width: '100%',
+      marginTop:2,
+      marginHorizontal:5
+
+      }}>{news.subtitle}</Text>
 
       </View>
       
@@ -39,20 +56,15 @@ const styles = StyleSheet.create({
     marginHorizontal:5,
     
   },
-  headerTitleStyle: {
-    fontSize: 15,
-    fontWeight: 'bold',
-    marginHorizontal:5,
-    color: "#2E2015",
-  },
-  headerContentStyle: {
-    fontSize: 12,
-    fontWeight: '500',
-    color: "#2E2015",
-    width: '100%',
-    marginTop:2,
-    marginHorizontal:5
-  },
+
+  // headerContentStyle: {
+  //   fontSize: 12,
+  //   fontWeight: '500',
+  //   color: "#2E2015",
+  //   width: '100%',
+  //   marginTop:2,
+  //   marginHorizontal:5
+  // },
 
   imageStyle: {
     height: 108,

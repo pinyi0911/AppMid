@@ -16,13 +16,13 @@ const [change, setChange] = useState(true);
         <VStack 
         borderLeftWidth= "7"
         mt="5"
-        ml="1"
+        // ml="1"
         borderLeftColor="#FFC764"
         
         >
           <Text
           color={colorMode == "light" ? "#2E2015" : "#f8f8f8"} 
-          ml="3" fontWeight="700" w="203">{serial.name}</Text>
+          ml="3" fontWeight="700" w="226">{serial.name}</Text>
           <Text
           color={colorMode == "light" ? "#2E2015" : "#f8f8f8"}
           ml="3">{serial.gift}</Text>
@@ -31,7 +31,7 @@ const [change, setChange] = useState(true);
           ml="3">{serial.time}</Text>
         </VStack>
 
-         <Pressable
+         <Pressable mt="5"
 
           onPress={() => changeIcon()}>
               
@@ -43,7 +43,7 @@ const [change, setChange] = useState(true);
             w="92"
             />
               :<Image height="50" width="92"
-              source={{uri:"https://github.com/pinyi0911/AppMid/blob/master/img/Property%201=Default.jpg?raw=true"}}
+              source={{uri:"https://github.com/pinyi0911/AppMid/blob/master/img/Property%201=Default.png?raw=true"}}
               alt="已兌換"
               h="50"
               w="92"
