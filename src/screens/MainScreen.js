@@ -5,6 +5,7 @@ import newsData from "../json/news.json";
 import TeamList from "../components/TeamList";
 import teamData from "../json/btn_team.json";
 import SerialNum from "../components/SerialNum";
+import Team from "../components/Team";
 import { useColorMode,Text } from 'native-base';
 const MainScreen = ({ navigation }) => {
   const { colorMode } = useColorMode();  
@@ -27,7 +28,7 @@ const MainScreen = ({ navigation }) => {
         navigation={navigation}
       />
 
-      <Text 
+      {/* <Text 
 
       fontWeight= 'bold'
       fontSize= "17"
@@ -41,7 +42,8 @@ const MainScreen = ({ navigation }) => {
       <TeamList
       list={teamData.data}
       navigation={navigation}
-      />
+      /> */}
+      <Team navigation={navigation}/>
 
     </ScrollView>
   );

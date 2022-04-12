@@ -12,6 +12,7 @@ import { StatusBar } from 'native-base';
 import MainScreen from '../screens/MainScreen';
 import DetailScreen from '../screens/DetailScreen';
 import SerialNumScreen from '../screens/SerialNumScreen';
+import CookiesListScreen from '../screens/CookiesListScreen';
 import MyBookScreen from '../screens/MybookScreen';
 
 import {
@@ -148,6 +149,17 @@ const MyDrawer = () => {
         }}
       />
 
+    <Drawer.Screen 
+        name="CookiesList" 
+        component={CookiesStack} 
+        options={{
+          
+          headerShown: false,
+          drawerLabel: "餅乾圖鑑",
+
+        }}
+      />
+
     
       
       
@@ -204,7 +216,46 @@ const SerialStack = ({navigation}) => {
     </Stack.Navigator>
   );
 }
+const CookiesStack = ({navigation}) => {
 
+  const { colorMode } = useColorMode();
+
+  return (
+    <Stack.Navigator
+      // screenOptions={{
+      //   headerShown: false
+      // }}
+    >
+      
+<Stack.Screen
+        name="CookiesListPage"
+        component={CookiesListScreen}
+        options={{
+          title: "餅乾圖鑑",
+          headerStyle: {
+            backgroundColor: colorMode=='light'?"#f8f8f8":"#2E2015",
+          },
+          headerTitleStyle: {
+            fontWeight: '700',
+            fontSize: 15,
+            // marginLeft:20,
+            color:colorMode=='light'?"#2E2015":"#f8f8f8"
+          },
+          // headerShadowVisible: false,//去除陰影
+
+          headerLeft: () => (
+            <Box mr="3" >
+            <MaterialCommunityIcons 
+            name="menu" color={colorMode=='light'?"#2E2015":"#FFC764"} size={24} 
+            onPress={()=>navigation.openDrawer()}
+            />
+            </Box>
+          ), // 漢堡選單
+        }}
+      />
+    </Stack.Navigator>
+  );
+}
 const HomeStack = ({navigation}) => {
 
   const { colorMode } = useColorMode();
@@ -244,6 +295,7 @@ const HomeStack = ({navigation}) => {
           ), // 漢堡選單
         }}
       />
+      
 
       
       <Stack.Screen
