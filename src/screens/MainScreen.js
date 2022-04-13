@@ -2,25 +2,22 @@ import React from "react";
 import { View,ScrollView } from "react-native";
 import NewsList from "../components/NewsList";
 import newsData from "../json/news.json";
-import TeamList from "../components/TeamList";
-import teamData from "../json/btn_team.json";
 import SerialNum from "../components/SerialNum";
 import Team from "../components/Team";
 import { useColorMode,Text } from 'native-base';
+
 const MainScreen = ({ navigation }) => {
   const { colorMode } = useColorMode();  
   return (
     <ScrollView style={{flex: 1,backgroundColor:colorMode == "light" ? "#f8f8f8" : "#2E2015"}}>
       <SerialNum navigation={navigation}/>
       <Text 
-
-      fontWeight= 'bold'
-      fontSize= "17"
-      paddingTop= "30"
-      paddingBottom= "1"
-      paddingLeft= "5"
-      color={colorMode == "light" ? "#2E2015" : "#f8f8f8"}
-
+        fontWeight= 'bold'
+        fontSize= "17"
+        paddingTop= "30"
+        paddingBottom= "1"
+        paddingLeft= "5"
+        color={colorMode == "light" ? "#2E2015" : "#f8f8f8"}
       >{newsData.title}</Text>
 
       <NewsList 
@@ -28,21 +25,6 @@ const MainScreen = ({ navigation }) => {
         navigation={navigation}
       />
 
-      {/* <Text 
-
-      fontWeight= 'bold'
-      fontSize= "17"
-      paddingTop= "30"
-      mb= "1"
-      paddingLeft= "5"
-      color={colorMode == "light" ? "#2E2015" : "#f8f8f8"}
-
-      >{teamData.title}</Text>
-
-      <TeamList
-      list={teamData.data}
-      navigation={navigation}
-      /> */}
       <Team navigation={navigation}/>
 
     </ScrollView>
