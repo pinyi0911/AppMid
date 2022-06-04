@@ -110,10 +110,11 @@ const CookieScreen = ({ route }) => {
                                 
                             
                     </Center>
+                    
                     <Center >
                     
                     <VictoryChart polar 
-                        theme={VictoryTheme.material}
+                        // theme={VictoryTheme.material}
                         animate={{
                             duration: 2000,
                             onLoad: { duration: 1000 }
@@ -125,10 +126,8 @@ const CookieScreen = ({ route }) => {
                         style={{
                             data: {
                                fill:"#FFC764",
-                               
+
                             },
-                            
-                            
                          }}
                         data={[
                         {x:"公會",y:50,},
@@ -141,11 +140,21 @@ const CookieScreen = ({ route }) => {
                         width={250}
                         height={250}
                         
+                        
                         />
                         <VictoryPolarAxis
                         labelPlacement="vertical"
+                        style={{
+                            grid: {stroke:colorMode == "light" ? "#2E2015":"#F8F8F8",strokeWidth: '2',},
+                            tickLabels: {fill:colorMode == "light" ? "#2E2015":"#F8F8F8",fontSize:"12px",fontWeight:"bold",},
+                            axis: {
+                                stroke: colorMode == "light" ? "#2E2015":"#F8F8F8",strokeWidth: '2',
+                              },
+
+                         }}
                         width={250}
                         height={250}
+                        
                         />
                     </VictoryChart>
                     
