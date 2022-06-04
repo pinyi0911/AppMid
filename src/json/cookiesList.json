@@ -1,75 +1,238 @@
-{
-    "title1": "上古／傳奇",
-    "data1": [
-       {
-          
-          "name": "純香草",
-          "image": "https://github.com/pinyi0911/AppMid/blob/master/img/btn_cookie.jpg?raw=true"
-       },
-       {
-          
-        "name": "海妖精",
-        "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Mask%20group.jpg?raw=true"
-       },
-       {
-          
-        "name": "冰霜女王",
-        "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2035.jpg?raw=true"
-       }
-    ],
-    "title2": "超級稀有",
-    "data2": [
+[
+    {
+        "title": "上古／傳奇",
+        "horizontal": true,
+        "data": [
+           {
+            "name": "純香草",
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/btn_cookie.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%A6%99%E8%8D%89%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%A6%99%E8%8D%89%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%A6%99%E8%8D%89%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "愛與和平",
+            "skillDescription1": "利用香草花手杖釋放出柔和而溫暖的光芒,恢復我方全體體力,並產生最大體力一定比例的餅乾護盾。",
+            "skillDescription2": "體力恢復:相當 99.4%攻擊力的體力 (每升一等+1.5%攻擊力)",
+            "skillDescription3": "餅乾護盾:20.0%最大體力(維持3.0秒)",
+            "CDtime": 19,
+            "equipment1": "攻擊",
+            "equipment2": "",
+            "recommend": ""
+
+           },
+           {              
+            "name": "海妖精",
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Mask%20group.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%B5%B7%E5%A6%96%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%B5%B7%E5%A6%96%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%B5%B7%E5%A6%96%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "湧動的心",
+            "skillDescription1": "向最近的敵人(最多5個、餅乾優先)發射水流,帶來傷害並使其暈眩。一段時間後，水流將形成形如滿月的水坑，從中湧出蘊含永恆之力的水柱，為敵人帶來巨大傷害",
+            "skillDescription2": "水流傷害:150.0% / 水柱傷害:431.7%",
+            "skillDescription3": "暈眩:3.0秒",
+            "CDtime": 17, 
+            "equipment1": "攻擊",
+            "equipment2": "",
+            "recommend": ""
+           },
+           {             
+            "name": "冰霜女王",
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2035.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E5%86%B0%E9%9C%9C%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E5%86%B0%E9%9C%9C%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E5%86%B0%E9%9C%9C%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "冰霜風暴",
+            "skillDescription1": "往前產生酷寒的冰霜風暴,造成所有敵人傷害,並凍結接觸到的敵人。當被結凍時冷卻時間暫停,凍結持續時間完全結束後可造成額外傷害，冰霜女王餅乾本身可抵凍結。效果發動的部分時間內,較能抵抗來自敵方的干擾。",
+            "skillDescription2": "1回傷害:67.8%(維持9秒,每升一等+0.92%傷害力)",
+            "skillDescription3": "凍結敵人時間:2秒",
+            "CDtime": 18,
+            "equipment1": "攻擊",
+            "equipment2": "",
+            "recommend": ""
+           }
+        ]},
         {
+        "title": "超級稀有",
+        "horizontal": true,
+        "data": [
+            {
             "name": "黑糖",
-            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2040.jpg?raw=true"
-        },
-        {
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2040.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%BB%91%E7%B3%96%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%BB%91%E7%B3%96%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%BB%91%E7%B3%96%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "果斷神弓",
+            "skillDescription1": "神弓箭的厲害之處,就在雙劍變化為神弓時!與敵方拉開距離,轉為遠距攻擊(餅乾優先),在射中的敵方身上留下箭記號。箭記號會在遠距離攻擊結束後,黑糖餅乾接近時爆炸,並造成最大體裡一定比例的傷害。遠距離攻擊期間可對減益效果免疫。效果發動的時間內,較能抵抗來自敵方的干擾(最大體力傷害上限:300,000)。",
+            "skillDescription2": "最大體力的一定比例傷害(餅乾):+0.6%(最大傷害:22.1%)",
+            "skillDescription3": "最大體力的一定比例傷害(其他):+0.06%(最大傷害:2.2%)",
+            "CDtime": 10,
+            "equipment1": "攻擊",
+            "equipment2": "",
+            "recommend": ""
+            },
+            {
             "name": "黑巧克力",
-            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2041.jpg?raw=true"
-        },
-        {
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2041.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%BB%91%E5%B7%A7%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%BB%91%E5%B7%A7%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%BB%91%E5%B7%A7%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "暗黑劍擊",
+            "skillDescription1": "將大劍朝地面一擊,閃電變接續轟散。受到禁用魔法影響的敵人將造成巨大傷害,短時間內防禦力降低。",
+            "skillDescription2": "1回傷害:432.7%",
+            "skillDescription3": "防禦力減少:20.0%(維持7.0秒)",
+            "CDtime":  13,
+            "equipment1": "傷害抵抗",
+            "equipment2": "",
+            "recommend": ""
+            },
+            {
             "name": "閃電泡芙",
-            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2049.jpg?raw=true"
-        }],
-    "data3": [
-        {
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2049.jpg?raw=true",
+            "fileImage": "",
+            "skillName": "研究學者的書",
+            "skillDescription1": "藉由長期研究所累積的知識分析並抓住對方的弱點。對攻擊力最高的三個敵方(餅乾優先)發動擴大傷害的「傷害增加」減益效果,並造成傷害。敵方因閃電泡芙餅乾的「傷害增加」簡易效果而無法戰鬥時,我方所有餅乾皆產生體力護盾。",
+            "skillDescription2": "1回傷害:480.6%(每升一等+6.54%攻擊力)",
+            "skillDescription3": "傷害增加:25.0%(維持40.0秒)、最多疊加4次",
+            "CDtime": 16,
+            "equipment1": "攻擊",
+            "equipment2": "冷卻",
+            "recommend": ""
+            },
+            {
             "name": "棉花",
-            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2039.jpg?raw=true"
-            
-        },
-        {
-            "name": "泡芙",
-            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2048.jpg?raw=true"
-        },
-        {
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2039.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%A3%89%E8%8A%B1%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%A3%89%E8%8A%B1%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%A3%89%E8%8A%B1%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "一盞溫暖提燈",
+            "skillDescription1": "棉花餅乾的燈籠發亮時,可定期恢復我方泉源的體力,並增加召喚獸的攻擊力。同時還能召喚羊群對敵方使出衝撞攻擊,造成範圍傷害使敵人昏眩。召喚的羊群將於一段時間內與我方一起戰鬥。",
+            "skillDescription2": "體力恢復:每1.0秒恢復9.9%(維持9秒,每升一等+0.13%恢復力)",
+            "skillDescription3": "攻擊力增加:燈籠亮時75.0%",
+            "CDtime": 17,
+            "equipment1": "冷卻",
+            "equipment2": "攻擊",
+            "recommend": ""
+                
+            },
+            {
+            "name": "奶油泡芙",
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2048.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%B3%A1%E8%8A%99%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%B3%A1%E8%8A%99%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%B3%A1%E8%8A%99%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "Jellious Extremus!!",
+            "skillDescription1": "颳起大面積果凍旋風，造成範圍傷害，並恢復我方全體體力。技能將以魔法大成功取代暴擊，魔法大成功的機率與暴擊率相同。魔法大成工時技能傷害與恢復量大幅增加。效果發動的部分時間內，較能抵抗來自敵方的干擾。",
+            "skillDescription2": "1回傷害:469.5%、大成功時1166.8% ",
+            "skillDescription3": "體力恢復:攻擊力的103.5%、大成功時攻擊力的238.6%",
+            "CDtime":  16,
+            "equipment1": "傷害抵抗",
+            "equipment2": "冷卻",
+            "recommend": ""
+            },
+            {
             "name": "雪酪鯊魚",
-            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2044.jpg?raw=true"
-        }],
-    "data4": [
-        {
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2044.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%AF%8A%E9%AF%8A%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%AF%8A%E9%AF%8A%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%AF%8A%E9%AF%8A%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "鯊魚潛水",
+            "skillDescription1": "颳起大面積果凍旋風，造成範圍傷害，並恢復我方全體體力。技能將以魔法大成功取代暴擊，魔法大成功的機率與暴擊率相同。魔法大成工時技能傷害與恢復量大幅增加。效果發動的部分時間內，較能抵抗來自敵方的干擾。",
+            "skillDescription2": "1回傷害:432.7%",
+            "skillDescription3": "最大體力的一定比例傷害(餅乾):+0.6%(最大傷害:22.1%)",
+            "CDtime": 17,
+            "equipment1": "攻擊",
+            "equipment2": "冷卻",
+            "recommend": ""
+            },
+            {
             "name": "紫丁香",
-            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2050.jpg?raw=true"
-        },
-        {
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2050.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E7%B4%AB%E4%B8%81%E9%A6%99%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E7%B4%AB%E4%B8%81%E9%A6%99%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E7%B4%AB%E4%B8%81%E9%A6%99%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "紫色劍舞",
+            "skillDescription1": "颳起大面積果凍旋風，造成範圍傷害，並恢復我方全體體力。技能將以魔法大成功取代暴擊，魔法大成功的機率與暴擊率相同。魔法大成工時技能傷害與恢復量大幅增加。效果發動的部分時間內，較能抵抗來自敵方的干擾。",
+            "skillDescription2": "1回傷害:432.7%",
+            "skillDescription3": "最大體力的一定比例傷害(餅乾):+0.6%(最大傷害:22.1%)",
+            "CDtime": 17,
+            "equipment1": "攻擊",
+            "equipment2": "",
+            "recommend": ""
+            },
+            {
             "name": "覆盆莓",
-            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2047.jpg?raw=true"
-        },
-        {
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2047.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E8%A6%86%E7%9B%86%E8%8E%93%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E8%A6%86%E7%9B%86%E8%8E%93%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E8%A6%86%E7%9B%86%E8%8E%93%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "覆盆莓劍術",
+            "skillDescription1": "颳起大面積果凍旋風，造成範圍傷害，並恢復我方全體體力。技能將以魔法大成功取代暴擊，魔法大成功的機率與暴擊率相同。魔法大成工時技能傷害與恢復量大幅增加。效果發動的部分時間內，較能抵抗來自敵方的干擾。",
+            "skillDescription2": "1回傷害:432.7%",
+            "skillDescription3": "最大體力的一定比例傷害(餅乾):+0.6%(最大傷害:22.1%)",
+            "CDtime": 17,
+            "equipment1": "攻擊",
+            "equipment2": "傷害抵抗",
+            "recommend": ""
+            },
+            {
             "name": "草莓可麗餅",
-            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2045.jpg?raw=true"
-        }],
-    "data5": [
-        {
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2045.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E5%8F%AF%E9%BA%97%E9%A4%85%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E5%8F%AF%E9%BA%97%E9%A4%85%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E5%8F%AF%E9%BA%97%E9%A4%85%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "可麗餅之擊",
+            "skillDescription1": "颳起大面積果凍旋風，造成範圍傷害，並恢復我方全體體力。技能將以魔法大成功取代暴擊，魔法大成功的機率與暴擊率相同。魔法大成工時技能傷害與恢復量大幅增加。效果發動的部分時間內，較能抵抗來自敵方的干擾。",
+            "skillDescription2": "1回傷害:432.7%",
+            "skillDescription3": "最大體力的一定比例傷害(餅乾):+0.6%(最大傷害:22.1%)",
+            "CDtime": 15,
+            "equipment1": "冷卻",
+            "equipment2": "傷害抵抗",
+            "recommend": ""
+            },
+            {
             "name": "杏仁果",
-            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2046.jpg?raw=true"
-        },
-        {
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2046.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%9D%8F%E4%BB%81%E6%9E%9C%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%9D%8F%E4%BB%81%E6%9E%9C%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%9D%8F%E4%BB%81%E6%9E%9C%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "魔法杏仁果手銬",
+            "skillDescription1": "颳起大面積果凍旋風，造成範圍傷害，並恢復我方全體體力。技能將以魔法大成功取代暴擊，魔法大成功的機率與暴擊率相同。魔法大成工時技能傷害與恢復量大幅增加。效果發動的部分時間內，較能抵抗來自敵方的干擾。",
+            "skillDescription2": "1回傷害:432.7%",
+            "skillDescription3": "最大體力的一定比例傷害(餅乾):+0.6%(最大傷害:22.1%)",
+            "CDtime": 15,
+            "equipment1": "冷卻",
+            "equipment2": "",
+            "recommend": ""
+            },
+            {
             "name": "拿鐵",
-            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2043.jpg?raw=true"
-        },
-        {
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2043.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%8B%BF%E9%90%B5%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%8B%BF%E9%90%B5%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%8B%BF%E9%90%B5%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "大杯熱拿鐵",
+            "skillDescription1": "畫出拿鐵魔法陣,圍住敵人並持續給予傷害並呈現沉默狀態。魔法陣留在原處,持續造成傷害,中心散發濃郁的味道,可造成更大的傷害。",
+            "skillDescription2": "1回傷害:相當 60.0%攻擊力的體力 (每升一等+1.4%攻擊力)",
+            "skillDescription3": "拿鐵魔法陣中央總傷害:140%攻擊力(每升一等+1.8%攻擊力)",
+            "CDtime": 16,
+            "equipment1": "攻擊",
+            "equipment2": "冷卻",
+            "recommend": ""
+            },
+            {
             "name": "濃縮咖啡",
-            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2042.jpg?raw=true"
-        }
-    ]
-}
+            "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2042.jpg?raw=true",
+            "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E5%92%96%E5%95%A1%E4%BA%AE.png?raw=true",
+            "fileImage_D": "https://github.com/pinyi0911/AppMid/blob/master/img/%E5%92%96%E5%95%A1%E6%9A%97.png?raw=true",
+            "skillImage": "https://github.com/pinyi0911/AppMid/blob/master/img/%E5%92%96%E5%95%A1%E6%8A%80%E8%83%BD.png?raw=true",
+            "skillName": "濃縮式研磨",
+            "skillDescription1": "一杯好咖啡始於研磨咖啡豆!發出巨大旋風對遠方敵人造成多次範圍傷害,並吸入魔法的中央。最後爆發中斷對方技能。",
+            "skillDescription2": "傷害:相當 99.4%攻擊力的體力 (每升一等+1.5%攻擊力)",
+            "skillDescription3": "7回共80%攻擊力(每升一等+1.05%攻擊力)",
+            "CDtime": 15,
+            "equipment1": "攻擊",
+            "equipment2": "冷卻",
+            "recommend": ""
+            }
+        ]}
+
+]
