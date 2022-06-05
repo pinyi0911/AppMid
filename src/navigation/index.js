@@ -294,25 +294,25 @@ const CookiesStack = ({navigation}) => {
               color:colorMode=='light'?"#2E2015":"#f8f8f8"
             },
             headerLeft: () => (
-              <Pressable>
-                  <MaterialCommunityIcons 
-                  name={'chevron-left'} 
-                  color={'black'} 
-                  size={30}
-                  onPress={ () => {navigation.navigate('CookiesListPage')}}
-              />
-              </Pressable>
+              <Box mr={3}>
+              <MaterialCommunityIcons 
+              name={'arrow-left'} 
+              color={colorMode=='light'?"#2E2015":"#FFC764"} 
+              size={24}
+              onPress={ () => {navigation.navigate('CookiesListPage')}}
+          />
+          </Box>
           ),
-          headerRight: () => (
-            <Pressable>
-                <MaterialCommunityIcons 
-                name={'heart'} 
-                color={'black'} 
-                size={30}
-                onPress={ () => {navigation.navigate('CookiesListPage')}}
-            />
-            </Pressable>
-        ),
+        //   headerRight: () => (
+        //     <Pressable>
+        //         <MaterialCommunityIcons 
+        //         name={'heart'} 
+        //         color={'black'} 
+        //         size={30}
+        //         onPress={ () => {navigation.navigate('CookiesListPage')}}
+        //     />
+        //     </Pressable>
+        // ),
             }}
         />
     </Stack.Navigator>

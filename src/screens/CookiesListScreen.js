@@ -3,11 +3,19 @@ import SegmentedControlTab from "react-native-segmented-control-tab";
 import { Image, Box, Center, ScrollView, Text, useColorMode } from "native-base";
 import CookiesList from "../components/CookiesList";
 import cookiesData from "../json/cookiesList.json";
+import { useDispatch, useSelector } from "react-redux";
+import { likeActions } from "../../redux/likeSlice";
 
 const CookiesListScreen = ({navigation}) => {
+    const likeItems = useSelector((state) => state.like.likeList);
+    console.log(likeItems);
+    const dispatch = useDispatch();    
 const { colorMode } = useColorMode();
 const [selectedIndex, setSelectedIndex] = useState(0);
 const SegmentedContent = () => {
+
+
+
     if(selectedIndex == 0){
         return (
             // <ScrollView style={{flex: 1,backgroundColor:colorMode == "light" ? "#f8f8f8" : "#2E2015"}}>
@@ -24,27 +32,45 @@ const SegmentedContent = () => {
             // </ScrollView>
         );
     }else{
+        {likeItems.map((item) => {
         return (
-            <Center 
-            bg={colorMode == "light" ? "#f8f8f8" : "#2E2015"}  flex={1}>
-            {colorMode == "light" ?
-                (<Image
-                    width= "150"
-                    height= "135"
-                    source={{uri: "https://github.com/pinyi0911/AppMid/blob/master/img/%E8%9B%8B%E7%B3%95%E7%8B%97.png?raw=true"}}
-                    alt="cakeDog"
-                    ml={15}
-                /> ):
-                (<Image
-                    width= "150"
-                    height= "135"
-                    source={{uri: "https://github.com/pinyi0911/AppMid/blob/master/img/%E8%9B%8B%E7%B3%95%E7%8B%97_%E5%92%96.png?raw=true"}}
-                    alt="cakeDog_Dark"
-                    ml={15}
-                /> )}
-                <Text fontSize={21} fontWeight="bold" color={colorMode == "light" ?"#CAC6C4":"#564334"}>尚未開放</Text>
+            
+
+            // <Center 
+            // bg={colorMode == "light" ? "#f8f8f8" : "#2E2015"}  flex={1}>
+            // {colorMode == "light" ?
+            //     (<Image
+            //         width= "150"
+            //         height= "135"
+            //         source={{uri: "https://github.com/pinyi0911/AppMid/blob/master/img/%E8%9B%8B%E7%B3%95%E7%8B%97.png?raw=true"}}
+            //         alt="cakeDog"
+            //         ml={15}
+            //     /> ):
+            //     (<Image
+            //         width= "150"
+            //         height= "135"
+            //         source={{uri: "https://github.com/pinyi0911/AppMid/blob/master/img/%E8%9B%8B%E7%B3%95%E7%8B%97_%E5%92%96.png?raw=true"}}
+            //         alt="cakeDog_Dark"
+            //         ml={15}
+            //     /> )}
+            //     <Text fontSize={21} fontWeight="bold" color={colorMode == "light" ?"#CAC6C4":"#564334"}>尚未開放</Text>
+            // </Center>
+            <Center  mb={30} style={{flex: 1,backgroundColor:colorMode == "light" ? "#f8f8f8" : "#2E2015"}}>
+                    <Box 
+                        bg={colorMode == "light" ? "#f8f8f8" : "#2E2015"} 
+                        flex={1}>
+                        {/* <CookiesList
+                            list={item.data}
+                            navigation={navigation}
+                        /> */}
+                        <Text>{item.id}</Text>
+                    </Box>
             </Center>
+
+            
+
         );
+    })}
     }    
 }
 
