@@ -12,6 +12,7 @@ import SerialNumScreen from '../screens/SerialNumScreen';
 import CookiesListScreen from '../screens/CookiesListScreen';
 import TeamListScreen from '../screens/TeamListScreen';
 import CookieScreen from '../screens/CookieScreen';
+import TestScreen from '../screens/TestScreen';
 
 import {
   createDrawerNavigator,
@@ -168,12 +169,95 @@ const MyDrawer = () => {
           headerShown: false,
           drawerLabel: "公會隊伍",
         }}
-      />    
-      
+      /> 
+      <Drawer.Screen 
+        name="TestList" 
+        component={TestStack} 
+        // options={{          
+        //   headerShown: false,
+        //   drawerLabel: "測試",
+        // }}
+      /> 
+
     </Drawer.Navigator>
   );
 }
+const TestStack = ({navigation}) => {
+  const { colorMode } = useColorMode();
+  return (
+    <Stack.Navigator
+      // screenOptions={{
+      //   headerShown: false
+      // }}
+    >
+      
+    <Stack.Screen
+        name="TestScreenPage"
+        component={TestScreen}
+        options={{
+          title: "公會隊伍推薦",
+          headerStyle: {
+            backgroundColor: colorMode=='light'?"#f8f8f8":"#2E2015",
+          },
+          headerTitleStyle: {
+            fontWeight: '700',
+            fontSize: 17,
+            color:colorMode=='light'?"#2E2015":"#f8f8f8"
+          },
+          // headerShadowVisible: false,//去除陰影
 
+          headerLeft: () => (
+            <Box mr="3" >
+            <MaterialCommunityIcons 
+              name="menu" color={colorMode=='light'?"#2E2015":"#FFC764"} size={24} 
+              onPress={()=>navigation.openDrawer()}
+            />
+            </Box>
+          ), // 漢堡選單
+        }}
+    />
+
+<Stack.Screen
+          name="CookiePage"
+          component={CookieScreen}
+          options={{
+            title: "餅乾個人設定頁",
+            headerStyle: {
+              backgroundColor: colorMode=='light'?"#f8f8f8":"#2E2015",
+            },
+            headerTitleStyle: {
+              fontWeight: '700',
+              fontSize: 17,
+              color:colorMode=='light'?"#2E2015":"#f8f8f8"
+            },
+            headerLeft: () => (
+              <Box mr={3}>
+              <MaterialCommunityIcons 
+              name={'arrow-left'} 
+              color={colorMode=='light'?"#2E2015":"#FFC764"} 
+              size={24}
+              onPress={ () => {navigation.navigate('CookiesListPage')}}
+          />
+          </Box>
+          ),
+        //   headerRight: () => (
+        //     <Pressable>
+        //         <MaterialCommunityIcons 
+        //         name={'heart'} 
+        //         color={'black'} 
+        //         size={30}
+        //         onPress={ () => {navigation.navigate('CookiesListPage')}}
+        //     />
+        //     </Pressable>
+        // ),
+            }}
+        />
+
+
+    
+    </Stack.Navigator>
+  );
+}
 const SerialStack = ({navigation}) => {
   const { colorMode } = useColorMode();
   return (
@@ -318,6 +402,8 @@ const CookiesStack = ({navigation}) => {
     </Stack.Navigator>
   );
 }
+
+
 
 const HomeStack = ({navigation}) => {
   const { colorMode } = useColorMode();

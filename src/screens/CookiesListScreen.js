@@ -5,13 +5,14 @@ import CookiesList from "../components/CookiesList";
 import cookiesData from "../json/cookiesList.json";
 import { useDispatch, useSelector } from "react-redux";
 import { likeActions } from "../../redux/likeSlice";
-
+import TestScreen from"./TestScreen";
 const CookiesListScreen = ({navigation}) => {
     const likeItems = useSelector((state) => state.like.likeList);
-    console.log(likeItems);
+    // console.log(likeItems);
     const dispatch = useDispatch();    
 const { colorMode } = useColorMode();
 const [selectedIndex, setSelectedIndex] = useState(0);
+
 const SegmentedContent = () => {
 
 
@@ -32,7 +33,7 @@ const SegmentedContent = () => {
             // </ScrollView>
         );
     }else{
-        {likeItems.map((item) => {
+        // {likeItems.map((item) => {
         return (
             
 
@@ -55,22 +56,16 @@ const SegmentedContent = () => {
             //     /> )}
             //     <Text fontSize={21} fontWeight="bold" color={colorMode == "light" ?"#CAC6C4":"#564334"}>尚未開放</Text>
             // </Center>
-            <Center  mb={30} style={{flex: 1,backgroundColor:colorMode == "light" ? "#f8f8f8" : "#2E2015"}}>
-                    <Box 
-                        bg={colorMode == "light" ? "#f8f8f8" : "#2E2015"} 
-                        flex={1}>
-                        {/* <CookiesList
-                            list={item.data}
-                            navigation={navigation}
-                        /> */}
-                        <Text>{item.id}</Text>
-                    </Box>
-            </Center>
-
             
+                    // <Box> 
+
+                    //     <Text>{item.name}</Text>
+                    // </Box>
+           
+                    <TestScreen/>
 
         );
-    })}
+    // })}
     }    
 }
 

@@ -24,11 +24,15 @@ const likeSlice = createSlice({
         //     state.totalQuantity++;
         },
         removeFromLike(state,action) {
-            const id = action.payload;
+            // const id = action.payload;
             // const existingItem = state.cartList.find(item => item.id === id);
             
             // if(existingItem.quantity === 1){
-                state.likeList = state.likeList.filter(item => item.id !== id);
+                // state.likeList = state.likeList.filter(item => item.id !== id);
+                return {
+                    ... state ,
+                    likeList: state.likeList.filter(item => item.id !== action.payload.id)
+                  }
             // } else {
             //     existingItem.quantity--;
             //     existingItem.totalPrice -= existingItem.price;
