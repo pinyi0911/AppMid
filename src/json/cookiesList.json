@@ -4,7 +4,7 @@
         "horizontal": true,
         "data": [
            {
-            "id":1,
+            "id": 1,
             "name": "純香草",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/btn_cookie.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%A6%99%E8%8D%89%E4%BA%AE.png?raw=true",
@@ -24,8 +24,8 @@
             "recomName": ["黑巧克力", "閃電泡芙" ,"雪酪鯊魚", "棉花"],
             "value": [40,40,50,50,40]
            },
-           {
-            "id":2,                 
+           {           
+            "id": 2,   
             "name": "海妖精",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Mask%20group.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%B5%B7%E5%A6%96%E4%BA%AE.png?raw=true",
@@ -45,8 +45,8 @@
             "recomName": ["黑巧克力", "閃電泡芙" ,"雪酪鯊魚", "棉花"],
             "value": [50,50,40,50,50]
            },
-           {
-            "id":3,                
+           {             
+            "id": 3,
             "name": "冰霜女王",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2035.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E5%86%B0%E9%9C%9C%E4%BA%AE.png?raw=true",
@@ -72,7 +72,7 @@
         "horizontal": true,
         "data": [
             {
-            "id":4,    
+            "id": 4,
             "name": "黑糖",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2040.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%BB%91%E7%B3%96%E4%BA%AE.png?raw=true",
@@ -93,7 +93,7 @@
             "value": [0,10,50,40,30]
             },
             {
-            "id":5,    
+            "id": 5,
             "name": "黑巧克力",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2041.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%BB%91%E5%B7%A7%E4%BA%AE.png?raw=true",
@@ -114,7 +114,7 @@
             "value": [50,20,20,50,40]
             },
             {
-            "id":6,    
+            "id": 6,
             "name": "閃電泡芙",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2049.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%96%83%E9%9B%BB%E4%BA%AE.png?raw=true",
@@ -135,7 +135,7 @@
             "value": [50,30,40,40,50]
             },
             {
-            "id":7,    
+            "id": 7,
             "name": "棉花",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2039.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%A3%89%E8%8A%B1%E4%BA%AE.png?raw=true",
@@ -157,7 +157,7 @@
                 
             },
             {
-            "id":8,
+            "id": 8,
             "name": "奶油泡芙",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2048.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%B3%A1%E8%8A%99%E4%BA%AE.png?raw=true",
@@ -178,7 +178,7 @@
             "value": [0,10,30,20,10]
             },
             {
-            "id":9,    
+            "id": 9,
             "name": "雪酪鯊魚",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2044.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E9%AF%8A%E9%AF%8A%E4%BA%AE.png?raw=true",
@@ -199,7 +199,7 @@
             "value": [50,40,40,50,40]
             },
             {
-            "id":10,
+            "id": 10,
             "name": "紫丁香",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2050.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E7%B4%AB%E4%B8%81%E9%A6%99%E4%BA%AE.png?raw=true",
@@ -220,7 +220,7 @@
             "value": [0,20,30,20,0]
             },
             {
-            "id":11,
+            "id": 11,
             "name": "覆盆莓",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2047.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E8%A6%86%E7%9B%86%E8%8E%93%E4%BA%AE.png?raw=true",
@@ -241,7 +241,7 @@
             "value": [0,10,10,30,20]
             },
             {
-            "id":12,
+            "id": 12,
             "name": "草莓可麗餅",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2045.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E5%8F%AF%E9%BA%97%E9%A4%85%E4%BA%AE.png?raw=true",
@@ -262,7 +262,7 @@
             "value": [20,30,30,30,30]
             },
             {
-            "id":13,
+            "id": 13,
             "name": "杏仁果",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2046.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%9D%8F%E4%BB%81%E6%9E%9C%E4%BA%AE.png?raw=true",
@@ -283,7 +283,7 @@
             "value": [0,30,40,30,20]
             },
             {
-            "id":14,
+            "id": 14,
             "name": "拿鐵",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2043.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E6%8B%BF%E9%90%B5%E4%BA%AE.png?raw=true",
@@ -304,7 +304,7 @@
             "value": [10,30,30,40,40]
             },
             {
-            "id":15,    
+            "id": 15,
             "name": "濃縮咖啡",
             "image": "https://github.com/pinyi0911/AppMid/blob/master/img/Group%2042.jpg?raw=true",
             "fileImage_B": "https://github.com/pinyi0911/AppMid/blob/master/img/%E5%92%96%E5%95%A1%E4%BA%AE.png?raw=true",

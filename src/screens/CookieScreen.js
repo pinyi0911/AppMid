@@ -1,32 +1,33 @@
+
 import React, { useState } from "react";
-import { TouchableOpacity } from "react-native";
-import { Image, Box, Center, ScrollView, Text, useColorMode, VStack, HStack, Pressable, Actionsheet, useDisclose,} from "native-base";
+import { Image, Box, Center, ScrollView, Text, useColorMode, VStack, HStack, Pressable, Actionsheet, useDisclose } from "native-base";
+import { TouchableOpacity, Alert } from "react-native";
 import { ScreenStackHeaderBackButtonImage } from "react-native-screens";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import CookiesListScreen from "./CookiesListScreen";
 import { VictoryPolarAxis,VictoryChart,VictoryArea,VictoryTheme } from 'victory-native';
-import { useSelector, useDispatch } from "react-redux";
-import { likeActions } from "../../redux/likeSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { likeActions, likeTime } from "../../redux/likeSlice";
 
 const CookieScreen = ({ route }) => {
+    var color;
+    const { like, name, image, fileImage_B, fileImage_D, 
+        skillImage, skillName, skillDescription1, skillDescription2, skillDescription3, CDtime, 
+        equipment1, equipment2, recommend, recomName, value  } = route.params;
 
+    const { colorMode } = useColorMode();
     const dispatch = useDispatch();
+
     const addToLike = () => {
         dispatch(likeActions.addToLike({...route.params}));
+        
     }
     const removeFromLike = () => {
         dispatch(likeActions.removeFromLike({...route.params}));
     }
-    var color;
-    const { name, image, fileImage_B, fileImage_D, 
-        skillImage, skillName, skillDescription1, skillDescription2, skillDescription3, CDtime, 
-        equipment1, equipment2, recommend, recomName, value  } = route.params;
-    const { colorMode } = useColorMode();
-    const [selectedIndex, setSelectedIndex] = useState(0);
-    const [change, setChange] = useState(true);
-  const changeIcon = () => {
-    setChange(!change);
-  };
+
+    const likeCount = useSelector(likeTime);
+
     const ifEquip =(type) => {
         switch (type) {
             case "傷害抵抗":
@@ -69,6 +70,7 @@ const CookieScreen = ({ route }) => {
             );
     }
     const { isOpen, onOpen, onClose } = useDisclose();
+    
     return(
         <ScrollView style={{flex: 1,backgroundColor:colorMode == "light" ? "#F8F8F8" : "#2E2015"}}>
 
@@ -87,48 +89,35 @@ const CookieScreen = ({ route }) => {
                         alt="fileImage_D"
                     /> )
                 }
-                {/* removeFromLike */}
-                <TouchableOpacity   onPress={() => { addToLike (),changeIcon() }}>
-                {change ? 
-                    <HStack bg="#FFC764" width="315" h="50" alignItems="center" justifyContent="center"
-                        borderColor="#2E2015"
-                        borderRadius={10}>
-                        <MaterialCommunityIcons 
-                        name={'plus-circle'} 
-                        color={colorMode == "light" ? "#2E2015" : "#f8f8f8"} 
-                        size={20}
-                        
-                        />
-                        <Text ml={2} fontSize={15} fontWeight="bold" color={colorMode == "light" ? "#2E2015" : "#f8f8f8"}>我 的 愛 餅</Text>
-                    </HStack>:
-                    <HStack bg="#FFC764" width="315" h="50" alignItems="center" justifyContent="center"
-                    borderColor="#2E2015"
-                    borderRadius={10}>
-                    <MaterialCommunityIcons 
-                    name={'plus-circle'} 
-                    color={colorMode == "light" ? "#2E2015" : "#f8f8f8"} 
-                    size={20}
-                    
-                    />
-                    <Text ml={2} fontSize={15} fontWeight="bold" color={colorMode == "light" ? "#2E2015" : "#f8f8f8"}>移 除 愛 餅</Text>
-                </HStack>
-                    }
-            </TouchableOpacity>    
-            <TouchableOpacity position="absolute" top={0}right={0}mb={5} mt={1} onPress={() => { removeFromLike ()}}>
 
-                    <HStack bg="#FFC764" width="315" h="50" alignItems="center" justifyContent="center"
-                        borderColor="#2E2015"
-                        borderRadius={10}>
-                        <MaterialCommunityIcons 
-                        name={'plus-circle'} 
-                        color={colorMode == "light" ? "#2E2015" : "#f8f8f8"} 
-                        size={20}
-                        
-                        />
-                        <Text ml={2} fontSize={15} fontWeight="bold" color={colorMode == "light" ? "#2E2015" : "#f8f8f8"}>我 的 愛 餅</Text>
-                    </HStack>
-               
-            </TouchableOpacity>
+                
+                
+                <HStack mt="1.5" w="315" justifyContent="flex-end" alignItems="flex-end" >   
+                    <TouchableOpacity  mb={5} mt={1} onPress={() => {addToLike()}}>
+                        <HStack bg="#FFC764" width="115" h="38" alignItems="center" justifyContent="center"
+                                borderColor={colorMode == "light" ? "#f8f8f8" : "#2E2015"} borderTopLeftRadius='20'>
+                            <MaterialCommunityIcons 
+                            name={'plus-circle'} 
+                            color="#2E2015"
+                            size={20} />
+                            <Text ml={2} fontSize={12} fontWeight="bold" color="#2E2015">我 的 愛 餅</Text>
+                        </HStack>
+                    </TouchableOpacity>
+                    <TouchableOpacity  mb={5} mt={1} onPress={() => {removeFromLike()}}>
+                        <HStack bg="#FFC764" width="115" h="38" alignItems="center" justifyContent="center"
+                                borderColor={colorMode == "light" ? "#f8f8f8" : "#2E2015"}
+                                borderLeftWidth={3} borderTopRightRadius={6}>
+                            <MaterialCommunityIcons 
+                            name={'minus-circle'} 
+                            color="#D24A20" 
+                            size={20} />
+                            <Text ml={2} fontSize={12} fontWeight="bold" color="#2E2015">移 除 愛 餅</Text>
+                        </HStack>
+                    </TouchableOpacity>
+                </HStack>
+
+                {/* {Count(likeCount)} */}
+                
                 <Box width={315} borderRadius={6} bg={colorMode == "light" ? "white" : "#564334"}>
                     <Text color={colorMode == "light" ? "#2E2015" : "#F8F8f8"} fontSize={15} fontWeight="bold" 
                         mt="18" ml="18" mr="3" mb="3" pl={3} borderLeftWidth={4} borderLeftColor="#FFC764">就業能力分析</Text>
